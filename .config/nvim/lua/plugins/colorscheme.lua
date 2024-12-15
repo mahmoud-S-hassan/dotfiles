@@ -15,7 +15,7 @@ return {
 					functions = {},
 					variables = {},
 					-- Background styles. Can be "dark", "transparent" or "normal"
-					--floats = "transparent", -- style for floating windows
+					floats = "transparent", -- style for floating windows
 					sidebars = "transparent", -- style for sidebars, see below
 				},
 			}
