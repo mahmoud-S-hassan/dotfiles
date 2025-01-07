@@ -62,6 +62,8 @@ bindkey '^[w' kill-region
 bindkey '^[[3~' delete-char
 bindkey '^[[3;5~' kill-word
 bindkey '^H' backward-kill-word
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -252,4 +254,9 @@ export PATH="$PATH:$HOME/.dotnet:$HOME/.dotnet/tools"
 
 
 # costumizing for personal 
-pokemon-colorscripts --no-title -r 1,3,6
+#pokemon-colorscripts --no-title -r 1,3,6
+
+export PATH=$PATH:/var/lib/snapd/snap/bin
+export DOCKER_HOST=unix:///home/abo-salah/.docker/desktop/docker.sock
+
+export DOCKER_HOST=unix:///var/run/docker.sock
