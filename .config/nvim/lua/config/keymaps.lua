@@ -83,3 +83,8 @@ keymap.set("n", "<A-s>", "<Esc>:w!<cr>")
 
 --keymap.set("v", "yy", ":w !clip.exe<cr>")
 keymap.set("n", "<C-\\>", ":ToggleTerm direction=float<cr>")
+
+keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>")
+keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>")
+keymap.set("n", "<C-j>", ":TmuxNavigateDown<CR>")
+keymap.set("n", "<C-k>", ":TmuxNavigateUp<CR>")

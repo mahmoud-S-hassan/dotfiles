@@ -83,7 +83,8 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
-
+# Bind Alt-j/k for navigation and Alt-Space for multi-select
+zstyle ':fzf-tab:*' fzf-bindings 'alt-space:toggle,alt-j:down,alt-k:up'
 # Aliases
 alias ls='ls --color'
 alias vim='nvim'
@@ -241,6 +242,10 @@ alias o='xdg-open'
 
 alias dr='dotnet run'
 alias fz="find . -type f | fzf --preview 'bat --style=numbers --color=always -- {}'"
+
+export FZF_CTRL_T_OPTS="--preview='less {}' --height=50% --bind shift-up:preview-page-up,shift-down:preview-page-down,alt-space:toggle+down"
+export FZF_COMPLETION_OPTS="--bind=alt-space:toggle+down"
+
 #path for typeScript
 export PATH=~/.npm-global/bin:$PATH
 
@@ -260,3 +265,5 @@ export PATH=$PATH:/var/lib/snapd/snap/bin
 export DOCKER_HOST=unix:///home/abo-salah/.docker/desktop/docker.sock
 
 export DOCKER_HOST=unix:///var/run/docker.sock
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/apps/manage_session:$PATH"
