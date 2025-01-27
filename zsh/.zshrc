@@ -133,7 +133,7 @@ alias v=nvim
 
 #alias for nvims with fzf
 alias va=nvim-astro
-alias vl=nvim-lazy
+alias vk=nvim-kick
 alias vd=nvim-DEVASLIFE
 
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
