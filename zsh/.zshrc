@@ -130,7 +130,7 @@ alias cl=clear
 alias c=clear
 alias e=exit
 alias v=nvim
-
+alias mpv="prime-run mpv"
 #alias for nvims with fzf
 alias va=nvim-astro
 alias vk=nvim-kick
