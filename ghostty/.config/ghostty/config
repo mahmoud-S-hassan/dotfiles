@@ -1,0 +1,26 @@
+theme = Solarized Dark Higher Contrast
+#theme = tokyonight
+#theme = GruvboxDarkHard
+
+shell-integration-features = no-cursor,sudo,no-title
+cursor-style = block
+adjust-cell-height = 3%
+background-opacity = 0.9
+background-blur-radius = 10
+font-size = 14
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+gtk-titlebar = false
+gtk-wide-tabs = false
+#window-decoration = false
+
+window-padding-balance = true 
+window-save-state = always
+
+confirm-close-surface = false
+window-decoration = true
+window-padding-x = 5
+window-padding-y = 5
+window-padding-balance = true
