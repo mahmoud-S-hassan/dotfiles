@@ -15,3 +15,5 @@ export PATH=~/.npm-global/bin:$PATH
 
 #export PATH="$PATH:$HOME/.dotnet:$HOME/.dotnet/tools"
 export PATH="$PATH:$HOME/.dotnet:$HOME/.dotnet/tools"
+
+export PATH="$HOME/.npm-global/bin:$PATH"
