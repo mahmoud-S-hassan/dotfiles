@@ -59,7 +59,7 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Diagnostics
-keymap.set("n", "<C-j>", function()
+keymap.set("n", "<C-d>", function()
 	vim.diagnostic.goto_next()
 end, opts)
 
@@ -86,5 +86,5 @@ keymap.set("n", "<C-\\>", ":ToggleTerm direction=float<cr>")
 
 keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>")
 keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>")
-keymap.set("n", "<C-j>", ":TmuxNavigateDown<CR>")
+keymap.set("n", "<C-J>", ":TmuxNavigateDown<CR>")
 keymap.set("n", "<C-k>", ":TmuxNavigateUp<CR>")

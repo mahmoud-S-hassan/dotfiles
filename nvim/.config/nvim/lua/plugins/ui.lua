@@ -349,7 +349,7 @@ return {
 						InclineNormalNC = { guifg = colors.violet500, guibg = colors.base03 },
 					},
 				},
-				window = { margin = { vertical = 2, horizontal = 0 } },
+				window = { margin = { vertical = 0, horizontal = 0 } },
 				hide = {
 					cursorline = true,
 				},
