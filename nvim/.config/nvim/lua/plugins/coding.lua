@@ -76,22 +76,23 @@ return {
 		end,
 		opts = {
 			mappings = {
-				add = "sa", -- Add surrounding in Normal and Visual modes
-				delete = "sd", -- Delete surrounding
-				find = "sf", -- Find surrounding (to the right)
-				find_left = "sF", -- Find surrounding (to the left)
-				highlight = "sh", -- Highlight surrounding
-				replace = "sr", -- Replace surrounding
-				update_n_lines = "sn", -- Update `n_lines`
+				add = "gsa", -- Add surrounding in Normal and Visual modes
+				delete = "gsd", -- Delete surrounding
+				find = "gsf", -- Find surrounding (to the right)
+				find_left = "gsF", -- Find surrounding (to the left)
+				highlight = "gsh", -- Highlight surrounding
+				replace = "gsr", -- Replace surrounding
+				update_n_lines = "gsn", -- Update `n_lines`
 			},
 		},
 	},
 	-- Better increase/descrease
 	{
 		"monaqa/dial.nvim",
+		event = "LazyFile",
     -- stylua: ignore
     keys = {
-      { "<C-a>", function() return require("dial.map").inc_normal() end, expr = true, desc = "Increment" },
+      { "<C-i>", function() return require("dial.map").inc_normal() end, expr = true, desc = "Increment" },
       { "<C-x>", function() return require("dial.map").dec_normal() end, expr = true, desc = "Decrement" },
     },
 		config = function()

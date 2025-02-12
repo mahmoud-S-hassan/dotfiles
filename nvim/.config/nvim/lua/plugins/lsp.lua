@@ -13,7 +13,8 @@ return {
 				"typescript-language-server",
 				"csharp-language-server",
 				"csharpier",
-				"emmet-language-server",
+				"html-lsp",
+				-- "emmet-language-server",
 			})
 		end,
 	},

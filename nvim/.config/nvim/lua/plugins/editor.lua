@@ -289,7 +289,7 @@ return {
 				open_mapping = [[<c-\>]],
 				shade_terminals = false,
 				float_opts = {
-					--border = "double",
+					--( border ) = "double",
 					border = "rounded",
 				},
 				-- add --login so ~/.zprofile is loaded

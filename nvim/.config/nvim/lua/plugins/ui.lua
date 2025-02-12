@@ -249,6 +249,12 @@ return {
 			})
 		end,
 	},
+	{
+		"neph-iap/easycolor.nvim",
+		dependencies = { "stevearc/dressing.nvim" }, -- Optional, but provides better UI for editing the formatting template
+		opts = {},
+		keys = { { "<leader>k", "<cmd>EasyColor<cr>", desc = "Color Picker" } },
+	},
 	-- -- animations
 	-- {
 	-- 	"echasnovski/mini.animate",
