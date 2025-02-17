@@ -20,14 +20,27 @@ keymap.set("n", "<Leader>D", '"_D')
 keymap.set("v", "<Leader>D", '"_D')
 
 -- Increment/decrement
-keymap.set("n", "+", "<C-a>")
+-- keymap.set("n", "+", "<C-a>")
+keymap.set("n", "=", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
 -- Delete a word backwards
 keymap.set("n", "dw", 'vb"_d')
 
 -- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
+-- keymap.set("n", "<C-a>", "gg<S-v>G")
+vim.keymap.set("n", "<C-a>", function()
+	if vim.fn.mode() == "v" then
+		-- Exit visual mode
+		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, true, true), "n", true)
+	else
+		-- Select all text
+		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("ggVG", true, true, true), "n", true)
+	end
+end, { noremap = true, silent = true })
+
+-- Prevent <C-a> from incrementing numbers
+vim.keymap.set("v", "<C-a>", "<Esc>", { noremap = true, silent = true })
 
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
