@@ -14,8 +14,14 @@ return {
 				"csharp-language-server",
 				"csharpier",
 				"html-lsp",
+				"codelldb",
+				-- "bacon-ls",
+				"cpptools",
 				-- "emmet-language-server",
 			})
+			-- if diagnostics == "bacon-ls" then
+			-- 	vim.list_extend(opts.ensure_installed, { "bacon" })
+			-- end
 		end,
 	},
 
