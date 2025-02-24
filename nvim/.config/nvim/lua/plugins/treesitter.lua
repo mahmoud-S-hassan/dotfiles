@@ -25,6 +25,8 @@ return {
 				"git_config",
 				"git_rebase",
 				"gitcommit",
+				"rust",
+				"ron",
 			},
 
 			-- matchup = {
