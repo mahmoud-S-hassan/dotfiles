@@ -1,18 +1,26 @@
-theme = Solarized Dark Higher Contrast
+##themes
+# theme = Solarized Dark Higher Contrast
+theme = "Solarized Dark - Patched"
 #theme = tokyonight
 #theme = GruvboxDarkHard
-font-size = 14
-shell-integration-features = no-cursor,sudo,no-title
-cursor-style = block
-adjust-cell-height = 3%
+
+##fonts 
+font-size = 16
+font-family = "PlemolJP Console NF"
+
 background-opacity = 0.9
 background-blur-radius = 10
+# background = #031219
+
+shell-integration-features = no-cursor,sudo,no-title
+cursor-style = block
+adjust-cell-height = 1%
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
 
 gtk-titlebar = false
 gtk-wide-tabs = false
-#window-decoration = false
+window-decoration = false
 
 window-padding-balance = true 
 window-save-state = always
