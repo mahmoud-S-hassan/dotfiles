@@ -16,3 +16,5 @@ alias tn='tmux new-session'
 alias tl='tmux list-sessions'
 # tmux new-window
 alias tw='tmux neww'
+
+alias kt='$HOME/dotfiles/scripts/tmux/kill_sessions.sh'

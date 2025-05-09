@@ -14,16 +14,18 @@ export FZF_COMPLETION_OPTS="--bind=alt-space:toggle+down"
 export PATH=~/.npm-global/bin:$PATH
 
 #export PATH="$PATH:$HOME/.dotnet:$HOME/.dotnet/tools"
-export PATH="$PATH:$HOME/.dotnet:$HOME/.dotnet/tools"
+# export PATH="$PATH:$HOME/.dotnet:$HOME/.dotnet/tools:$HOME/usr/share/dotnet/sdk:$PATH"
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$DOTNET_ROOT:$PATH
 
 export PATH="$HOME/.npm-global/bin:$PATH"
 
 
-export LIBGL_ALWAYS_INDIRECT=0
-export MESA_GL_VERSION_OVERRIDE=4.6
-export MESA_LOADER_DRIVER_OVERRIDE=i965 # Use `iris` for newer Intel GPUs
-export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/intel_icd.x86_64.json
-export VK_LAYER_PATH=/usr/share/vulkan/explicit_layer.d
+# export LIBGL_ALWAYS_INDIRECT=0
+# export MESA_GL_VERSION_OVERRIDE=4.6
+# export MESA_LOADER_DRIVER_OVERRIDE=i965 # Use `iris` for newer Intel GPUs
+# export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/intel_icd.x86_64.json
+# export VK_LAYER_PATH=/usr/share/vulkan/explicit_layer.d
 
 # # from hyde config
 #
