@@ -1,9 +1,9 @@
 
 export XDG_DATA_DIRS="$HOME/.local/share:$XDG_DATA_DIRS"
 export PATH=$PATH:/var/lib/snapd/snap/bin
-export DOCKER_HOST=unix:///home/abo-salah/.docker/desktop/docker.sock
+# export DOCKER_HOST=unix:///home/abo-salah/.docker/desktop/docker.sock
 
-export DOCKER_HOST=unix:///var/run/docker.sock
+# export DOCKER_HOST=unix:///var/run/docker.sock
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/apps/manage_session:$PATH"
 
