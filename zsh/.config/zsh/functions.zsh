@@ -44,6 +44,35 @@ _gitLogLineToHash() {
 }
 
 #-----------------------------------------------------------------------------#
+# # Function to handle directory changes using fzf
+# function _fzf_change_directory {
+#     local foo
+#     foo=$(printf "%s\n" "${directories[@]}" | fzf --prompt="🗂 Select Directory → " --height=50% --layout=reverse --border --exit-0)
+#     if [ "$foo" ]; then
+#         builtin cd "$foo"
+#     fi
+# }
+#
+# # Main function to list and navigate directories using fzf
+# function fzf_change_directory {
+#     local directories
+#     directories=($(echo "$HOME/.config"
+#         # Check if ghq root exists or remove this line if not needed
+#         [ -d "$(ghq root)" ] && find "$(ghq root)" -maxdepth 4 -type d -name .git | sed 's/\/\.git//'
+#         ls -ad */ | perl -pe "s#^#$PWD/#" | grep -v \.git
+#         # Check if Developments exists and contains directories
+#         if [ -d "$HOME/Developments" ]; then
+#             ls -ad $HOME/Developments/*/* | grep -v \.git
+#         fi
+#     ))
+#
+#     if [ ${#directories[@]} -eq 0 ]; then
+#         echo "No directories found!"
+#         return
+#     fi
+#
+#     _fzf_change_directory
+# }
 # Function to handle directory changes using fzf
 function _fzf_change_directory {
     local foo
@@ -55,22 +84,39 @@ function _fzf_change_directory {
 
 # Main function to list and navigate directories using fzf
 function fzf_change_directory {
-    local directories
-    directories=($(echo "$HOME/.config"
-        # Check if ghq root exists or remove this line if not needed
-        [ -d "$(ghq root)" ] && find "$(ghq root)" -maxdepth 4 -type d -name .git | sed 's/\/\.git//'
-        ls -ad */ | perl -pe "s#^#$PWD/#" | grep -v \.git
-        # Check if Developments exists and contains directories
-        if [ -d "$HOME/Developments" ]; then
-            ls -ad $HOME/Developments/*/* | grep -v \.git
-        fi
-    ))
+    local -a directories  # Explicitly declare as an array
 
+    # Add ~/.config
+    directories+=("$HOME/.config")
+
+    # Add ghq repositories if ghq is installed
+    if command -v ghq >/dev/null 2>&1 && [ -d "$(ghq root)" ]; then
+        directories+=($(find "$(ghq root)" -maxdepth 4 -type d -name .git | sed 's/\/\.git//'))
+    fi
+
+    # Add immediate subdirectories of the current directory
+    if ls -d */ >/dev/null 2>&1; then
+        directories+=($(ls -d */ | perl -pe "s#^#$PWD/#" | grep -v \.git))
+    fi
+
+    # Add directories under ~/Developments
+    if [ -d "$HOME/dev/" ]; then
+        if ls -d $HOME/dev/*/* >/dev/null 2>&1; then
+            directories+=($(ls -d $HOME/dev/*/* | grep -v \.git))
+        fi
+    fi
+
+    # Check if any directories were found
     if [ ${#directories[@]} -eq 0 ]; then
         echo "No directories found!"
-        return
+        return 1
     fi
+
+    # Remove duplicates and sort
+    directories=($(printf "%s\n" "${directories[@]}" | sort -u))
 
     _fzf_change_directory
 }
 
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit
