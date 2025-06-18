@@ -21,6 +21,17 @@ export PATH=$DOTNET_ROOT:$PATH
 export PATH="$HOME/.npm-global/bin:$PATH"
 
 
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/abo-salah/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/abo-salah/.dart-cli-completion/zsh-config.zsh ]] && . /home/abo-salah/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
 # export LIBGL_ALWAYS_INDIRECT=0
 # export MESA_GL_VERSION_OVERRIDE=4.6
 # export MESA_LOADER_DRIVER_OVERRIDE=i965 # Use `iris` for newer Intel GPUs
