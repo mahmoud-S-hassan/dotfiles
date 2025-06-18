@@ -8,6 +8,7 @@ fi
 
 source_all_files() {
     local config_dir="$HOME/dotfiles/zsh/.config/zsh"
+    local alias_dir="$config_dir/aliases"
 
     # Source prompt.zsh first
     source "$config_dir/prompt.zsh"
@@ -19,6 +20,12 @@ source_all_files() {
             source "$file"
         fi
     done
+
+    if [[ -d $alias_dir ]]; then
+      for file in "$alias_dir"/*.zsh; do
+        [[ -f $file ]] && source "$file"
+      done
+    fi
 }
 
 # Call the function to source all .zsh files

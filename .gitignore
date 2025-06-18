@@ -4,3 +4,6 @@ automation_commands/
 zsh.bak/
 *Zone.Identifier*
 hypr_custom/accel.py
+DEVASLIFE
+nvim/.config/nvim/lazy-lock.json
+nvim/.config/nvim/lazyvim.json
