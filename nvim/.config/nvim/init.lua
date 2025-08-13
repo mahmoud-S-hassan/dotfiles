@@ -47,3 +47,10 @@ lspconfig.asm_lsp.setup({
 		return lspconfig.util.root_pattern(".git")(fname) or lspconfig.util.path.dirname(fname)
 	end,
 })
+
+vim.g.dbs = {
+	["Company_SD"] = "sqlserver://sa:P%40ssw0rd@localhost:1433?database=Company_SD&encrypt=true&trustServerCertificate=true",
+	["hospitals"] = "sqlserver://sa:P%40ssw0rd@localhost:1433?database=hospitals&encrypt=true&trustServerCertificate=true",
+	["MyDatabase"] = "sqlserver://sa:P%40ssw0rd@localhost:1433?database=MyDatabase&encrypt=true&trustServerCertificate=true",
+	["SalesDB"] = "sqlserver://sa:P%40ssw0rd@localhost:1433?database=SalesDB&encrypt=true&trustServerCertificate=true",
+}

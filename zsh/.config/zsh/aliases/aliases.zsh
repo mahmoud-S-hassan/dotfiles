@@ -9,7 +9,8 @@ alias l='eza -lh --icons=auto' # long list
 alias ls='eza -1 --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
-alias lt='eza --icons=auto --tree' # list folder as tree
+# alias lt='eza --icons=auto --tree' # list folder as tree
+alias lt='eza --tree --level=2 --long --icons --git'
 alias vc='code' # gui code editor
 alias la='exa -alh'
 # Directory navigation shortcuts
@@ -27,6 +28,7 @@ alias mkdir='mkdir -p'
 alias c=clear
 alias e=exit
 alias v=nvim
+alias v.='nvim .'
 #alias for nvims with fzf
 alias va=nvim-astro
 alias vk=nvim-kick
@@ -46,4 +48,11 @@ alias o='xdg-open'
 
 alias dr='dotnet run'
 alias fz="find . -type f | fzf --preview 'bat --style=numbers --color=always -- {}'"
+
+
+cdf() {
+  local dir
+  dir=$(find . -type d -not -path '*/\.*' | sed 's|^\./||' | peco)
+  [ -n "$dir" ] && cd "$dir"
+}
 

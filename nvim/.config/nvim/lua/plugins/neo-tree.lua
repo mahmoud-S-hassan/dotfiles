@@ -106,7 +106,7 @@ return {
 				},
 			},
 			window = {
-				width = 31, -- Set the width of the Neo-tree window
+				width = 27, -- Set the width of the Neo-tree window
 				height = 101, -- Set the height (if vertical) or use it for split sizes
 				position = "left", -- "left", "right", "top", or "bottom"
 

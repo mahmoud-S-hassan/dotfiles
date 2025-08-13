@@ -68,6 +68,7 @@ return {
 		opts = {
 			bigfile = { enabled = true },
 			dashboard = { enabled = true },
+			explorer = { enabled = false },
 			notifier = {
 				enabled = true,
 				timeout = 3000,

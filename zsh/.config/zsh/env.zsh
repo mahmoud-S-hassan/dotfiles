@@ -20,6 +20,12 @@ export PATH=$DOTNET_ROOT:$PATH
 
 export PATH="$HOME/.npm-global/bin:$PATH"
 
+# Add JetBrains Rider to PATH if it exists
+JETBRAINS_DIR="$HOME/.local/share/JetBrains/Toolbox/apps"
+
+if [ -d "$JETBRAINS_DIR/rider/bin" ]; then
+    export PATH="$PATH:$JETBRAINS_DIR/rider/bin"
+fi
 
 
 # Added by LM Studio CLI (lms)
