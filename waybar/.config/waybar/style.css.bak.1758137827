@@ -1,0 +1,137 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  background-color: @background;
+  color: @foreground;
+
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: CaskaydiaMono Nerd Font;
+  font-size: 12px;
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+#tray,
+#cpu,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio,
+#custom-omarchy,
+#custom-update {
+  min-width: 12px;
+  margin: 0 7.5px;
+}
+
+#custom-expand-icon {
+  margin-right: 7px;
+}
+
+tooltip {
+  padding: 2px;
+}
+
+#custom-update {
+  font-size: 10px;
+}
+
+#clock {
+  margin-left: 8.75px;
+}
+
+.hidden {
+  opacity: 0;
+}
+/* #taskbar button {
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    margin-left: 0em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    margin-right: 0em;
+    color: @wb-color;
+    animation: tb_normal 20s ease-in-out 1;
+}
+
+#taskbar button.active {
+    background: @wb-act-bg;
+    color: @wb-act-color;
+    margin-left: 0.3em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    margin-right: 0.3em;
+    animation: tb_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+#taskbar button:hover {
+    background: @wb-hvr-bg;
+    color: @wb-hvr-color;
+    animation: tb_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+
+
+#workspaces,
+#taskbar {
+    padding: 0em;
+} */
+ #taskbar {
+    background: @primary;
+    margin: 3px 15px 3px 0px;
+    padding:3px;
+    border-radius: 5px 5px 5px 5px;
+    /* font-weight: normal; */
+    /* font-style: normal; */
+    opacity:1.0;
+    /* border: 0.1px solid @border_color; */
+}
+
+#taskbar button.active {
+    /* background: @wb-act-bg; */
+    background: #3e3d3d;
+    /* color: @wb-act-color; */
+    color: #9d3232;
+    margin-left: 0.3em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    margin-right: 0.3em;
+    animation: tb_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+#taskbar button {
+    margin:0;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0px 5px 0.px 5px;
+}
+
+#taskbar.empty {
+    background:transparent;
+    border:0;
+    padding:0;
+    margin:0;
+}

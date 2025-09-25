@@ -1,0 +1,404 @@
+
+* {
+  /* Primary states */
+  active-background: #073642; /* Solarized base01, slightly brighter for active elements */
+  active-foreground: #93a1a1; /* Solarized base1 for readable text */
+  normal-background: #002b36; /* Solarized base03 for deep, dark background */
+  normal-foreground: #839496; /* Solarized base0 for neutral text */
+  urgent-background: #e65552; /* Patched red, more vibrant for alerts */
+  urgent-foreground: #002b36; /* Solarized base03 for contrast */
+
+  /* Alternate states */
+  alternate-active-background: #2aa198; /* Solarized cyan, crisp for secondary active */
+  alternate-active-foreground: #002b36; /* Solarized base03 for contrast */
+  alternate-normal-background: #002b36; /* Matching base03 background */
+  alternate-normal-foreground: #839496; /* Matching base0 foreground */
+  alternate-urgent-background: #002b36; /* Neutral base03 for subtle alerts */
+  alternate-urgent-foreground: #93a1a1; /* Solarized base1 for readability */
+
+  /* Selected states */
+  selected-active-background: #d75f87; /* Patched magenta, bolder for selected active */
+  selected-active-foreground: #002b36; /* Solarized base03 for contrast */
+  selected-normal-background: #d75f87; /* Patched magenta for selected neutral */
+  selected-normal-foreground: #002b36; /* Base03 for readability */
+  selected-urgent-background: #073642; /* Base01 for urgent selected */
+  selected-urgent-foreground: #93a1a1; /* Base1 for contrast */
+
+  /* General */
+  background-color: #002b36; /* Solarized base03 for main background */
+background: rgba(0, 43, 54, 0.7); /* Semi-transparent base03 for overlays */
+foreground: #839496; /* Solarized base0 for general text */
+            border-color: #073642; /* Solarized base01 for borders */
+
+            /* 16-color palette */
+color0:  #002b36; /* Base03: Dark background */
+         // color1:  #e65552; /* Patched red: Vivid alerts */
+color1:  #638e94ff; /* Patched red: Vivid alerts */
+
+color2:  #8ec07c; /* Patched green: Softer, modern success */
+color3:  #d79921; /* Patched yellow: Warmer, more vibrant */
+color4:  #268bd2; /* Solarized blue: Links, actions */
+color5:  #d75f87; /* Patched magenta: Bolder selections */
+color6:  #2aa198; /* Solarized cyan: Crisp accents */
+color7:  #eee8d5; /* Solarized base2: Light text/background */
+color8:  #586e75; /* Solarized base02: Muted background */
+color9:  #ff6a66; /* Patched orange-red: Brighter accent */
+color10: #99cc99; /* Patched light green: Subtle highlight */
+color11: #fabd2f; /* Patched bright yellow: Popping warnings */
+color12: #83a598; /* Patched blue-gray: Muted contrast */
+color13: #b16286; /* Patched violet-magenta: Richer accent */
+color14: #5eafa9; /* Patched cyan: Softer variation */
+color15: #93a1a1; /* Solarized base1: Light foreground */
+}
+
+// * {
+//   /* Primary states */
+//   active-background: #073642; /* Solarized base01 for active elements */
+//   active-foreground: #93a1a1; /* Solarized base1 for readable text */
+//   normal-background: #002b36; /* Solarized base03 for main background */
+//   normal-foreground: #839496; /* Solarized base0 for neutral text */
+//   urgent-background: #dc322f; /* Solarized red for alerts */
+//   urgent-foreground: #002b36; /* Solarized base03 for contrast */
+//
+//   /* Alternate states */
+//   alternate-active-background: #2aa198; /* Solarized cyan for secondary active */
+//   alternate-active-foreground: #002b36; /* Solarized base03 for contrast */
+//   alternate-normal-background: #002b36; /* Matching base03 background */
+//   alternate-normal-foreground: #839496; /* Matching base0 foreground */
+//   alternate-urgent-background: #002b36; /* Neutral base03 for subtle alerts */
+//   alternate-urgent-foreground: #93a1a1; /* Solarized base1 for readability */
+//
+//   /* Selected states */
+//   selected-active-background: #d33682; /* Solarized magenta for selected active */
+//   selected-active-foreground: #002b36; /* Solarized base03 for contrast */
+//   selected-normal-background: #d33682; /* Magenta for selected neutral */
+//   selected-normal-foreground: #002b36; /* Base03 for readability */
+//   selected-urgent-background: #073642; /* Base01 for urgent selected */
+//   selected-urgent-foreground: #93a1a1; /* Base1 for contrast */
+//
+//   /* General */
+//   background-color: #002b36; /* Solarized base03 for main background */
+//   background: rgba(0, 43, 54, 0.7); /* Semi-transparent base03 for overlays */
+//   foreground: #839496; /* Solarized base0 for general text */
+//   border-color: #073642; /* Solarized base01 for borders */
+//
+//   /* 16-color palette */
+//   color0:  #002b36; /* Base03: Dark background */
+//   color1:  #dc322f; /* Red: Alerts, errors */
+//   color2:  #859900; /* Green: Success, highlights */
+//   color3:  #b58900; /* Yellow: Warnings, accents */
+//   color4:  #268bd2; /* Blue: Links, primary actions */
+//   color5:  #d33682; /* Magenta: Selected elements */
+//   color6:  #2aa198; /* Cyan: Secondary accents */
+//   color7:  #eee8d5; /* Base2: Light text/background */
+//   color8:  #586e75; /* Base02: Muted background */
+//   color9:  #cb4b16; /* Orange: Strong accents */
+//   color10: #719e07; /* Alternate green */
+//   color11: #b58900; /* Alternate yellow */
+//   color12: #268bd2; /* Alternate blue */
+//   color13: #6c71c4; /* Violet: Subtle accents */
+//   color14: #2aa198; /* Alternate cyan */
+//   color15: #93a1a1; /* Base1: Light foreground */
+// }
+
+// * {
+//   /* Primary states */
+//   active-background: #6B4EFF; /* Vibrant purple for active elements */
+//   active-foreground: #F5F0FF; /* Soft off-white for contrast */
+//   normal-background: #1A1A2E; /* Deep navy for neutral backgrounds */
+//   normal-foreground: #EDEDED; /* Light gray for readability */
+//   urgent-background: #FF4A6E; /* Bright coral for alerts */
+//   urgent-foreground: #F5F0FF; /* Off-white for contrast */
+//
+//   /* Alternate states */
+//   alternate-active-background: #2A7B9B; /* Teal for secondary active elements */
+//   alternate-active-foreground: #F5F0FF; /* Off-white for consistency */
+//   alternate-normal-background: #1A1A2E; /* Matching neutral background */
+//   alternate-normal-foreground: #EDEDED; /* Matching neutral foreground */
+//   alternate-urgent-background: #1A1A2E; /* Neutral for less aggressive alerts */
+//   alternate-urgent-foreground: #F5F0FF; /* Off-white for readability */
+//
+//   /* Selected states */
+//   selected-active-background: #FF4A6E; /* Coral for selected active elements */
+//   selected-active-foreground: #F5F0FF; /* Off-white for contrast */
+//   selected-normal-background: #FF4A6E; /* Coral for selected neutral elements */
+//   selected-normal-foreground: #F5F0FF; /* Off-white for readability */
+//   selected-urgent-background: #6B4EFF; /* Purple for urgent selected elements */
+//   selected-urgent-foreground: #F5F0FF; /* Off-white for contrast */
+//
+//   /* General */
+//   background-color: #1A1A2E; /* Deep navy for main background */
+//   background: rgba(26, 26, 46, 0.7); /* Semi-transparent navy for overlays */
+//   foreground: #EDEDED; /* Light gray for general text */
+//   border-color: #6B4EFF; /* Purple for borders */
+//
+//   /* 16-color palette */
+//   color0:  #1A1A2E; /* Deep navy (background) */
+//   color1:  #FF4A6E; /* Coral (accents, alerts) */
+//   color2:  #2A7B9B; /* Teal (secondary elements) */
+//   color3:  #FFB347; /* Warm orange (highlights) */
+//   color4:  #6B4EFF; /* Vibrant purple (primary) */
+//   color5:  #FF6F91; /* Soft pink (accents) */
+//   color6:  #4AD8B8; /* Mint green (complementary) */
+//   color7:  #EDEDED; /* Light gray (text) */
+//   color8:  #8A8AA3; /* Muted gray (subtle elements) */
+//   color9:  #FF758B; /* Lighter coral (variations) */
+//   color10: #3A9BC3; /* Lighter teal (variations) */
+//   color11: #FFC107; /* Bright amber (highlights) */
+//   color12: #8B6EFF; /* Lighter purple (variations) */
+//   color13: #FF9BB3; /* Lighter pink (variations) */
+//   color14: #6EF0D1; /* Lighter mint (variations) */
+//   color15: #F5F0FF; /* Off-white (text, highlights) */
+// }
+
+
+// /* ---- Cyberpunk-Inspired Palette ---- */
+// * {
+//     active-background: #BF65F2;
+//     active-foreground: #0D0B10;
+//     normal-background: #0D0B10;
+//     normal-foreground: #FFFFFF;
+//     urgent-background: #00D1D1;
+//     urgent-foreground: #0D0B10;
+//
+//     alternate-active-background: #FF2A6D;
+//     alternate-active-foreground: #FFFFFF;
+//     alternate-normal-background: #15121A;
+//     alternate-normal-foreground: #FFFFFF;
+//     alternate-urgent-background: #1A1625;
+//     alternate-urgent-foreground: #FFFFFF;
+//
+//     selected-active-background: #FFE66D;
+//     selected-active-foreground: #0D0B10;
+//     selected-normal-background: #00D1D1;
+//     selected-normal-foreground: #0D0B10;
+//     selected-urgent-background: #BF65F2;
+//     selected-urgent-foreground: #0D0B10;
+//
+//     background-color: #0D0B10;
+//     background: rgba(13, 11, 16, 0.95);
+//     foreground: #FFFFFF;
+//     border-color: #BF65F2;
+//
+//     color0: #2A2535;
+//     color1: #120E15;
+//     color2: #3D2A55;
+//     color3: #553D6A;
+//     color4: #6A45A5;
+//     color5: #008C8C;
+//     color6: #45D1D1;
+//     color7: #FFFFFF;
+//     color8: #352A45;
+//     color9: #1A1520;
+//     color10: #8A45F2;
+//     color11: #FF2A6D;
+//     color12: #BF65F2;
+//     color13: #00D1D1;
+//     color14: #FFE66D;
+//     color15: #F0F0FF;
+// }
+
+// -----------------------------------------------
+// /* ---- High-Contrast Monochromatic Palette ---- */
+// * {
+//     active-background: #9370DB;
+//     active-foreground: #F2E6F0;
+//     normal-background: #0F0D13;
+//     normal-foreground: #F2E6F0;
+//     urgent-background: #6A5ACD;
+//     urgent-foreground: #F2E6F0;
+//
+//     alternate-active-background: #4B0082;
+//     alternate-active-foreground: #F2E6F0;
+//     alternate-normal-background: #1D1823;
+//     alternate-normal-foreground: #F2E6F0;
+//     alternate-urgent-background: #2A2435;
+//     alternate-urgent-foreground: #F2E6F0;
+//
+//     selected-active-background: #6A5ACD;
+//     selected-active-foreground: #F2E6F0;
+//     selected-normal-background: #9370DB;
+//     selected-normal-foreground: #0F0D13;
+//     selected-urgent-background: #4B0082;
+//     selected-urgent-foreground: #F2E6F0;
+//
+//     background-color: #0F0D13;
+//     background: rgba(15, 13, 19, 0.95);
+//     foreground: #F2E6F0;
+//     border-color: #9370DB;
+//
+//     color0: #2A2435;
+//     color1: #150F1A;
+//     color2: #3A2C55;
+//     color3: #5A4A7D;
+//     color4: #4B3A6A;
+//     color5: #6A5ACD;
+//     color6: #8B7BE0;
+//     color7: #F2E6F0;
+//     color8: #352D45;
+//     color9: #211B2A;
+//     color10: #5A4A8D;
+//     color11: #4B0082;
+//     color12: #9370DB;
+//     color13: #6A5ACD;
+//     color14: #B9A8EB;
+//     color15: #FAF0FF;
+// }
+
+
+
+
+// -----------------------------------------------
+// /* ---- Modern Cool Analogous Palette ---- */
+// * {
+//     active-background: #636EB9;
+//     active-foreground: #E8E1EA;
+//     normal-background: #181519;
+//     normal-foreground: #E8E1EA;
+//     urgent-background: #59A8A8;
+//     urgent-foreground: #E8E1EA;
+//
+//     alternate-active-background: #C97B84;
+//     alternate-active-foreground: #E8E1EA;
+//     alternate-normal-background: #1D1820;
+//     alternate-normal-foreground: #E8E1EA;
+//     alternate-urgent-background: #25212A;
+//     alternate-urgent-foreground: #E8E1EA;
+//
+//     selected-active-background: #8C9BD5;
+//     selected-active-foreground: #181519;
+//     selected-normal-background: #59A8A8;
+//     selected-normal-foreground: #181519;
+//     selected-urgent-background: #636EB9;
+//     selected-urgent-foreground: #E8E1EA;
+//
+//     background-color: #181519;
+//     background: rgba(24, 21, 25, 0.9);
+//     foreground: #E8E1EA;
+//     border-color: #636EB9;
+//
+//     color0: #2D2B35;
+//     color1: #1A1720;
+//     color2: #3A4560;
+//     color3: #5A4765;
+//     color4: #4A5590;
+//     color5: #487373;
+//     color6: #8C9BD5;
+//     color7: #E8E1EA;
+//     color8: #3A3655;
+//     color9: #25212A;
+//     color10: #5568A5;
+//     color11: #C97B84;
+//     color12: #636EB9;
+//     color13: #59A8A8;
+//     color14: #A8D0D0;
+//     color15: #F0E6F5;
+// }
+
+
+
+// -----------------------------------------------
+// /* ---- 💫 Modern Dark Palette ---- */
+// /* wallust template - colors-rofi */
+//
+// * {
+//   active-background: #5E81AC;
+//   active-foreground: #ECEFF4;
+//   normal-background: #2E3440;
+//   normal-foreground: #D8DEE9;
+//   urgent-background: #BF616A;
+//   urgent-foreground: #ECEFF4;
+//
+//   alternate-active-background: #81A1C1;
+//   alternate-active-foreground: #ECEFF4;
+//   alternate-normal-background: #3B4252;
+//   alternate-normal-foreground: #D8DEE9;
+//   alternate-urgent-background: #BF616A;
+//   alternate-urgent-foreground: #ECEFF4;
+//
+//   selected-active-background: #88C0D0;
+//   selected-active-foreground: #2E3440;
+//   selected-normal-background: #5E81AC;
+//   selected-normal-foreground: #ECEFF4;
+//   selected-urgent-background: #D08770;
+//   selected-urgent-foreground: #ECEFF4;
+//
+//   background-color: #2E3440;
+//   background: rgba(46, 52, 64, 0.8);
+//   foreground: #D8DEE9;
+//   border-color: #88C0D0;
+//
+//   /* Base colors (inspired by Nord theme, modern and balanced) */
+//   color0:  #3B4252; /* dark gray */
+//   color1:  #BF616A; /* red */
+//   color2:  #A3BE8C; /* green */
+//   color3:  #EBCB8B; /* yellow */
+//   color4:  #81A1C1; /* blue */
+//   color5:  #B48EAD; /* purple */
+//   color6:  #88C0D0; /* cyan */
+//   color7:  #E5E9F0; /* light gray */
+//   color8:  #4C566A; 
+//   color9:  #D06F79;
+//   color10: #B1D196;
+//   color11: #F0D399;
+//   color12: #8CAADE;
+//   color13: #C895BF;
+//   color14: #93CCDC;
+//   color15: #ECEFF4;
+// }
+
+
+
+
+
+
+//  /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  
+//  /* wallust template - colors-rofi */
+//
+// * {
+// active-background: #784CA0;
+// active-foreground: #FAE8E1;
+// normal-background: #181519;
+// normal-foreground: #FAE8E1;
+// urgent-background: #CC659A;
+// urgent-foreground: #FAE8E1;
+//
+// alternate-active-background: #914B4B;
+// alternate-active-foreground: #FAE8E1;
+// alternate-normal-background: #181519;
+// alternate-normal-foreground: #FAE8E1;
+// alternate-urgent-background: #181519;
+// alternate-urgent-foreground: #FAE8E1;
+//
+// selected-active-background: #CC659A;
+// selected-active-foreground: #FAE8E1;
+// selected-normal-background: #CC659A;
+// selected-normal-foreground: #FAE8E1;
+// selected-urgent-background: #784CA0;
+// selected-urgent-foreground: #FAE8E1;
+//
+// background-color: #181519;
+// background: rgba(0,0,0,0.7);
+// foreground: #FAE8E1;
+// border-color: #784CA0;
+//
+// color0: #3F3C40;
+// color1: #1A1022;
+// color2: #492E61;
+// color3: #6D3838;
+// color4: #5A3978;
+// color5: #994C74;
+// color6: #B58E80;
+// color7: #F0D6CC;
+// color8: #A8958F;
+// color9: #23152D;
+// color10: #613D81;
+// color11: #914B4B;
+// color12: #784CA0;
+// color13: #CC659A;
+// color14: #F2BDAA;
+// color15: #F0D6CC;
+//
+//
+// }
+//
