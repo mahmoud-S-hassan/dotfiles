@@ -54,3 +54,14 @@ vim.g.dbs = {
 	["MyDatabase"] = "sqlserver://sa:P%40ssw0rd@localhost:1433?database=MyDatabase&encrypt=true&trustServerCertificate=true",
 	["SalesDB"] = "sqlserver://sa:P%40ssw0rd@localhost:1433?database=SalesDB&encrypt=true&trustServerCertificate=true",
 }
+
+-- Auto save folds & cursor position
+vim.api.nvim_create_autocmd({ "BufWinLeave" }, {
+	pattern = "*",
+	command = "silent! mkview",
+})
+
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+	pattern = "*",
+	command = "silent! loadview",
+})

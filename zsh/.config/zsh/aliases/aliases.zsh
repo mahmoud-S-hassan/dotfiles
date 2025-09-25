@@ -42,6 +42,7 @@ alias nvim-DEVASLIFE="NVIM_APPNAME=DEVASLIFE nvim"
 alias nvim-Grim="NVIM_APPNAME=nvimGrim nvim"
 alias nvim-gg="NVIM_APPNAME=nvimgg nvim"
 
+alias discord='discord --enable-features=UseOzonePlatform --ozone-platform=x11'
 
 #open a photo for now until I know more
 alias o='xdg-open'
