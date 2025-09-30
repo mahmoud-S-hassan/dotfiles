@@ -44,7 +44,7 @@ color7:  #eee8d5; /* Solarized base2: Light text/background */
 color8:  #586e75; /* Solarized base02: Muted background */
 color9:  #ff6a66; /* Patched orange-red: Brighter accent */
 color10: #99cc99; /* Patched light green: Subtle highlight */
-color11: #fabd2f; /* Patched bright yellow: Popping warnings */
+color11: #408080ff; /* Patched bright yellow: Popping warnings */
 color12: #83a598; /* Patched blue-gray: Muted contrast */
 color13: #b16286; /* Patched violet-magenta: Richer accent */
 color14: #5eafa9; /* Patched cyan: Softer variation */

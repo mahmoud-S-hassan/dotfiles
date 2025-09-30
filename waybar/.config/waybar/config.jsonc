@@ -62,7 +62,6 @@
     "signal": 7,
     "interval": 3600,
   },
-
   "cpu": {
     "interval": 10,
     "format": "󰍛 {usage}%",
@@ -104,24 +103,20 @@
   //   }
   // },
   // -------------------------------------------------
-  // "wlr/taskbar": {
-  //   "format": "{icon}",
-  //   // "icon-size": 15,
-  //   "all-outputs": true,
-  //   "on-click": "activate",
-  //   "on-click-middle": "close",
-  //   "tooltip-format": "{title}",
-  // },
   "wlr/taskbar": {
     "format": "{icon}",
-    // "icon-size": 17,
-
+    "sort-by-app-id": true,
+    // "icon-theme": "Yaru-magenta",
+    "icon-size": 18,
+    "group-by": "app_id",
+    "spacing": 20,
     "all-outputs": true,
-    // "icon-theme": "Numix-Circle",
-    "tooltip-format": "{title}",
+    "tooltip-format": "{title}|{app_id}",
     "on-click": "activate",
     "on-click-middle": "close",
-    "ignore-list": ["Alacritty"],
+    // "ignore-list": [
+    //   "Alacritty"
+    // ],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition",
     },
@@ -130,7 +125,6 @@
       "Foot Server": "Terminal",
     },
   },
-
   //---------------------------------------------------------
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -166,7 +160,6 @@
       "critical": 10,
     },
   },
-
   "keyboard-state": {
     "format": "{name} {icon}",
     "format-icons": {
@@ -174,7 +167,6 @@
       "unlocked": "",
     },
   },
-
   "hyprland/language": {
     "format": "{}",
     "format-en": "US",
@@ -288,7 +280,6 @@
     "tooltip": true,
     "tooltip-format": "GPU Temperature: {temperatureC}°C",
   },
-
   "custom/fans": {
     "interval": 5,
     "return-type": "json",
@@ -318,7 +309,6 @@
   //   "tooltip-format": "GPU Fan: {} RPM ",
   // },
   // ----------------------------------------------------------------------
-
   "custom/cliphist": {
     "format": " ",
     "on-click": "sleep 0.1 && ~/dotfiles/hypr_custom/shellScript/cliphist.sh",
@@ -326,7 +316,6 @@
     "on-click-middle": "sleep 0.1 && ~/dotfiles/hypr_custom/shellScript/cliphist.sh w",
     "tooltip-format": "Left: Open clipboard Manager\nRight: Delete an entry\nMiddle: Clear list",
   },
-
   // Power Profiles Daemon
   "power-profiles-daemon": {
     "format": "{icon}",
@@ -340,3 +329,4 @@
     },
   },
 }
+
