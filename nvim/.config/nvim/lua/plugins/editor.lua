@@ -14,7 +14,7 @@ return {
 	},
 
 	{
-		"echasnovski/mini.hipatterns",
+		"nvim-mini/mini.hipatterns",
 		event = "BufReadPre",
 		opts = {
 			highlighters = {
@@ -318,7 +318,7 @@ return {
 		end,
 	},
 	{
-		"echasnovski/mini.indentscope",
+		"nvim-mini/mini.indentscope",
 		version = false, -- wait till new 0.7.0 release to put it back on semver
 		event = "LazyFile",
 		opts = {

@@ -1,1 +1,0 @@
-/home/abo-salah/.config/omarchy/current/theme/neovim.lua
